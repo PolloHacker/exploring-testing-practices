@@ -44,8 +44,18 @@ Escolha uma prática ou dado de teste relevante e explique com suas próprias pa
 
 ## Respostas
 
-Repositório: `<URL_DO_REPOSITÓRIO>`
+Repositório: `https://github.com/microsoft/vscode`
 
-URL TestMiner: `<URL_NO_TESTMINER>`
+URL TestMiner: `https://andrehora.github.io/testminer/#microsoft/vscode`
 
-Explicação: `<SUA_EXPLICAÇÃO>`
+Explicação:
+
+Uma prática de teste que se destaca nos dados do TestMiner para o VS Code é a **diversificação dos tipos de testes** (uma pirâmide de testes bem distribuída).
+
+Em vez de depender apenas de testes unitários, o projeto divide seus testes em diferentes categorias para cobrir o sistema de ponta a ponta:
+
+- **Testes unitários e de integração (3.803 arquivos):** validam a lógica interna de serviços, editores e extensões de forma rápida e isolada.
+- **Testes End-to-End (776 arquivos) e Smoke Tests (78 arquivos):** simulam o uso real do editor via interface gráfica (usando Playwright e Electron), garantindo que a aplicação inicialize e execute os fluxos essenciais sem quebrar antes de uma release.
+- **Snapshots (405 arquivos) e Fixtures (1.284 arquivos):** facilitam o teste de saídas visuais, sintaxe e comportamentos complexos com arquivos de exemplo reais, evitando asserções manuais repetitivas.
+
+Essa diversidade é essencial em um projeto do tamanho do VS Code: os testes unitários garantem agilidade para quem desenvolve no dia a dia, enquanto os testes de fumaça e ponta a ponta trazem a segurança necessária para lançar novas versões com frequência.
